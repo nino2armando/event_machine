@@ -44,7 +44,7 @@ class Server < EventMachine::Connection
   def unbind
     @@connected_clients.delete(self)
     broadcast("[#{@username}] is now offline!\n")
-    # here we need to adjust the session buddy stuff or maybe detect user offline 
+    # here we need to adjust the session buddy stuff or maybe detect user offline
     puts "Client disconnected..."
 
   end
@@ -134,6 +134,7 @@ class Server < EventMachine::Connection
 end
 
 EventMachine.run do
+
   # hit Control + C to stop
   Signal.trap("INT")  { EventMachine.stop }
   Signal.trap("TERM") { EventMachine.stop }
