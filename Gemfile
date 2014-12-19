@@ -15,3 +15,5 @@ gem 'simplecov', '~> 0.9.1'
 
 gem 'eventmachine', '~> 1.0.3'
 gem 'redis', '~> 3.2.0'
+gem 'json', '~> 1.8.1'
+
